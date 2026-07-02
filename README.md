@@ -1,8 +1,21 @@
 # n8n Python Task Runner Windows Fix
 
+## Tested
+
+- Windows 11
+- Python 3.13
+- n8n 2.8.4
+
 This repository contains a fix for running the **n8n Python Task Runner on Windows**.
 
 ## Problem
+
+Can't execute Python Code and warning on start:
+```
+Failed to start Python task runner in internal mode because its virtual environment is missing from this system.
+Launching a Python runner in internal mode is intended only for debugging and is not recommended for production.
+Users are encouraged to deploy in external mode.
+```
 
 The original implementation uses POSIX file descriptor APIs (`os.read()`, `os.write()`, `fileno()`) for IPC between the runner and its child process. These APIs are not compatible with `multiprocessing.Connection` on Windows, causing Python tasks to fail with errors such as:
 
