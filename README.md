@@ -7,6 +7,7 @@
 - n8n 2.8.4
 
 This repository contains a fix for running the **n8n Python Task Runner on Windows**.
+**WARNING! Read installation guide - need additional actions!**
 
 ## Problem
 
