@@ -33,3 +33,7 @@ The IPC implementation was rewritten to use the cross-platform `multiprocessing.
 * `Connection.recv_bytes()`
 
 The existing message format (4-byte length prefix + JSON payload) is preserved, so the external protocol remains unchanged while making the Python Task Runner work correctly on Windows.
+
+**NO DOCKER NEEDED** =)
+<img width="1888" height="818" alt="image" src="https://github.com/user-attachments/assets/7a615a1b-daf9-4923-a71f-b56db9bfc250" />
+
